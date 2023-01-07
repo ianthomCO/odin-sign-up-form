@@ -17,21 +17,38 @@ body{
     margin:0;
 }
 
-.container{
-    display:flex;
-    justify-content: space-between;
+
+/* Submit Button */
+button[type=submit]{
+    width:11rem;
+    font-family: Trispace;
+    font-size: 0.9rem;
+    color:white;
+    padding:10px 10px;
+    border-radius: 7px;
+    border: 1px solid black;
+    background-color: rgb(48, 48, 173);
 }
 
+button[type=submit]:hover{
+    background-color: rgb(24, 24, 131);
+}
+
+button[type=submit]:active{
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.25);
+    transform: scale(0.99);
+}
 
 /* Side Hero */
 
 .side-hero{
     display:flex;
     align-items: center;
-    flex:1;
-    height:100vh;
+    /* flex:1; */
+    height:16rem;
     background-image: url(/img/milkyway-background.jpeg);
     background-size: cover;
+    background-position: center;
 }
 
 .title{
@@ -58,6 +75,100 @@ body{
 /* Form */
 
 .side-form{
-    background-color: aliceblue;
+    background-color: rgb(228, 230, 238);
     flex:1.5;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
 }
+
+.header{
+    margin-bottom: 10px;
+    max-width: 650px;
+    font-size: 1.1rem;
+    padding-left:30px;
+}
+
+.form{
+    background-color: rgb(238, 241, 253);
+    padding: 20px 0;
+    box-shadow: 1px 3px 2px 0px rgba(0, 0, 0, 0.2);
+    padding: 10px 10px 25px;
+
+}
+
+.input-section{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+form{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:20px 20px;
+    width:100%;
+}
+
+form div{
+    width:15rem;
+}
+
+form input{
+    width:14rem;
+    height:1.5rem;
+    font-size: 1rem;
+    padding:3px 5px;
+}
+
+form label{
+    font-size: 0.8rem;
+}
+
+/* Form footer */
+
+.form-submit{
+    display:flex;
+    flex-direction: column;
+    margin:30px 0;
+    align-items: center;
+    
+}
+
+@media screen and (min-width: 900px) {
+    .container{
+        display:flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    
+    .container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .side-form > div{
+        padding-left:30px;
+    }
+
+    .input-section{
+        flex-direction: column;
+        align-items: flex-start;    
+    }
+
+    form{
+        justify-content: flex-start;
+    }
+
+    .side-hero{
+        height:100vh;
+        flex:1;
+    }
+
+    .form-submit{
+        align-items: flex-start;
+    }
+  }
