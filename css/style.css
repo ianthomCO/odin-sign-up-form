@@ -96,7 +96,7 @@ button[type=submit]:active{
     background-color: rgb(238, 241, 253);
     padding: 20px 0;
     box-shadow: 1px 3px 2px 0px rgba(0, 0, 0, 0.2);
-    padding: 10px 10px 25px;
+    padding: 10px 10px 45px;
 
 }
 
@@ -146,10 +146,15 @@ form label{
     text-align: center;
 }
 
+/* Input format */
+form > div{
+    position: relative;
+}
+
 input{
     outline:none;
 }
-/* Input format */
+
 input:focus:invalid{
     outline:none;
     border: 1px solid #d62629;
@@ -159,6 +164,31 @@ input:focus:valid{
     outline:none;
     border: 1px solid #26d63e;
 }
+
+input[type="tel"]:invalid:focus + span::after{
+    content: "Format 000-000-0000";
+    color:red;
+    font-size: 0.6rem;
+    position:absolute;
+    left:0;
+    bottom:-12px;
+}
+
+input[type="password"] + span{
+    display:none;
+}
+
+input[type="password"]:invalid:focus + span{
+    display:block;
+    color:red;
+    font-size: 0.6rem;
+    position:absolute;
+    left:0;
+    top:50px;
+    white-space: pre;
+}
+
+
 
 @media screen and (min-width: 900px) {
     .container{
@@ -196,5 +226,11 @@ input:focus:valid{
 
     .form-submit > p {
         max-width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 519px){
+    form > div{
+        margin-bottom: 15px;;
     }
   }
