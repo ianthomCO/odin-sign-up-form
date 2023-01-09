@@ -166,12 +166,12 @@ input:focus:valid{
 }
 
 input[type="tel"]:invalid:focus + span::after{
-    content: "Format 000-000-0000";
+    content: "ENTER 9 DIGIT PHONE NUMBER";
     color:red;
     font-size: 0.6rem;
     position:absolute;
     left:0;
-    bottom:-12px;
+    top:50px;
 }
 
 input[type="password"] + span{
