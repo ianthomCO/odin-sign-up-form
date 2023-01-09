@@ -1,12 +1,12 @@
 @font-face {
     font-family: Trispace;
-    src: url("/fonts/Trispace-Regular.ttf")  format('truetype');
+    src: url("./fonts/Trispace-Regular.ttf")  format('truetype');
     font-weight: normal;
 }
 
 @font-face{
     font-family: Trispace;
-    src:url("/fonts/Trispace-Bold.ttf")  format('truetype');
+    src:url("./fonts/Trispace-Bold.ttf")  format('truetype');
     font-weight: bold;
         
 }
@@ -48,7 +48,7 @@ button[type=submit]:active{
     align-items: center;
     /* flex:1; */
     height:300px;
-    background-image: url(/img/milkyway-background.jpeg);
+    background-image: url(./img/milkyway-background.jpeg);
     background-size: cover;
     background-position: center;
 }
